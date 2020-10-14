@@ -1,6 +1,13 @@
+$body-background-color: #272b30;
+$text: #2e9ad0;
+$text-strong: $text;
+$table-background-color: #353a41;
+$table-striped-row-even-background-color: #2e3338;
+
 @import "~bulma/sass/utilities/_all";
 @import "./fonts.scss";
 @import "./defaults.scss";
+
 
 $colors: (
   "white": ($white, $black),
@@ -13,5 +20,5 @@ $colors: (
   "danger": ($red $red-invert)
 );
 
-@import "~bulma/bulma";
+@import "~bulma/bulma.sass";
 @import "./base.scss";
