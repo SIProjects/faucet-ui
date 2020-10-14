@@ -3,12 +3,16 @@ import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import livereload from 'rollup-plugin-livereload';
 import { terser } from 'rollup-plugin-terser';
+import postcss from 'rollup-plugin-postcss';
+import alias from '@rollup/plugin-alias';
+import path from 'path';
+import autoPreprocess from 'svelte-preprocess';
 
 const production = !process.env.ROLLUP_WATCH;
 
 function serve() {
 	let server;
-	
+
 	function toExit() {
 		if (server) server.kill(0);
 	}
@@ -43,8 +47,23 @@ export default {
 			// a separate file - better for performance
 			css: css => {
 				css.write('bundle.css');
-			}
+			},
+      preprocess: autoPreprocess(),
+      emitCss: true,
 		}),
+
+    postcss({
+      extract: true,
+      minimize: true,
+      use: [
+        [
+          "sass",
+          {
+            includePaths: ["./node_modules", "./node_modules/bulma", "./src"],
+          }
+        ],
+      ],
+    }),
 
 		// If you have external dependencies installed from
 		// npm, you'll most likely need these plugins. In
@@ -67,7 +86,15 @@ export default {
 
 		// If we're building for production (npm run build
 		// instead of npm run dev), minify
-		production && terser()
+		production && terser(),
+
+    // Add an alias to look for files at root.
+    alias({
+      resolve: ['.jsx', '.js', '.svelte'],
+      entries: [
+        { find: '@', replacement: path.resolve(__dirname, 'src') },
+      ]
+    })
 	],
 	watch: {
 		clearScreen: false

@@ -1,0 +1,48 @@
+@import '../style/defaults.scss';
+
+.control .input {
+  height: 2rem;
+}
+.control .bar {
+  position: relative;
+  border-bottom: 0.0625rem solid #EBF2F7;
+  display: block;
+}
+.control .bar::before {
+  content: "";
+  height: 0.125rem;
+  width: 0;
+  left: 50%;
+  bottom: -0.0625rem;
+  position: absolute;
+  background: $primary;
+  transition: left 0.38s ease, width 0.38s ease;
+  z-index: 2;
+}
+.field {
+  padding: 0 1rem;
+}
+.label {
+  position: absolute;
+  top: 0.25rem;
+  pointer-events: none;
+  padding-left: 0.125rem;
+  z-index: 1;
+  color: #949494;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.38s ease;
+}
+.has-text-centered {
+  text-align: center;
+  .input {
+    text-align: center;
+  }
+  .label {
+    width: 100%;
+  }
+}
+.control input.has-value {
+  color: #4a4a4a;
+}
+

@@ -1,0 +1,17 @@
+@import "~bulma/sass/utilities/_all";
+@import "./fonts.scss";
+@import "./defaults.scss";
+
+$colors: (
+  "white": ($white, $black),
+  "black": ($black, $white),
+  "light": ($light, $light-invert),
+  "primary": ($primary, $primary-invert),
+  "info": ($info, $info-invert),
+  "success": ($success, $success-invert),
+  "warning": ($warning, $warning-invert),
+  "danger": ($red $red-invert)
+);
+
+@import "~bulma/bulma";
+@import "./base.scss";
