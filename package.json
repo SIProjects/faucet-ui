@@ -4,13 +4,15 @@
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
-    "start": "sirv public"
+    "start": "bin/serve.js public /api http://amaterasu:3000 --single"
   },
   "devDependencies": {
     "@rollup/plugin-alias": "^3.1.1",
     "@rollup/plugin-commonjs": "^14.0.0",
     "@rollup/plugin-node-resolve": "^8.0.0",
+    "http-proxy-middleware": "^1.0.6",
     "node-sass": "^4.14.1",
+    "polka": "^0.5.2",
     "rollup": "^2.3.4",
     "rollup-plugin-livereload": "^2.0.0",
     "rollup-plugin-postcss": "^3.1.8",
@@ -21,6 +23,7 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.1",
+    "axios": "^0.20.0",
     "bulma": "^0.9.1",
     "sirv-cli": "^1.0.0",
     "svelte-spa-router": "^3.0.3"

@@ -94,7 +94,7 @@ export default {
       entries: [
         { find: '@', replacement: path.resolve(__dirname, 'src') },
       ]
-    })
+    }),
 	],
 	watch: {
 		clearScreen: false

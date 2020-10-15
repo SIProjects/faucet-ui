@@ -1,5 +1,4 @@
 <script>
-
   $: data = [{
     address: "abcde",
     amount: 71,
