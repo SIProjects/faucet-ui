@@ -18,3 +18,22 @@
 .input {
   color: #272b30;
 }
+
+a.address {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+a.address:hover {
+  text-decoration: underline;
+  color: $text;
+}
+
+.amount {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.table {
+  font-size: 1.125rem;
+}

@@ -63,6 +63,9 @@ function run(serveDir, proxyPath, proxyUrl, opts) {
       createProxyMiddleware(proxyPath, {
         target: proxyUrl,
         changeOrigin: true,
+        pathRewrite: function (path, req) {
+          return path.replace('/api', '')
+        }
       }),
       sirv(serveDir, { dev: opts.dev, single: opts.single })
     )

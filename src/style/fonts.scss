@@ -51,3 +51,12 @@
   src: url("/fonts/Montserrat-Thin.ttf") format("truetype");
   font-weight: 100;
 }
+
+@font-face {
+    font-family: simplonmono-regular;
+    src: url("/fonts/simplonmono-regular.eot");
+    src: url("/fonts/simplonmono-regular.eot?#iefix") format("embedded-opentype"), url("/fonts/simplonmono-regular.woff2") format("woff2"), url("/fonts/simplonmono-regular.woff") format("woff"), url("/fonts/simplonmono-regular.ttf") format("truetype"); }
+@font-face {
+    font-family: euclidflexmedium;
+    src: url("/fonts/euclidflexmedium.eot");
+    src: url("/fonts/euclidflexmedium.eot?#iefix") format("embedded-opentype"), url("/fonts/euclidflexmedium.woff2") format("woff2"), url("/fonts/euclidflexmedium.woff") format("woff"), url("/fonts/euclidflexmedium.ttf") format("truetype"); }

@@ -49,7 +49,7 @@ Please enter your SICash address to receive test tokens
   </div>
   <div class="hero is-dark">
     <div class="hero-body is-small">
-      <h2 class="title is-6">Latest Payouts</h2>
+      <h2 class="title is-5">Latest Payouts</h2>
       <Recents />
     </div>
   </div>

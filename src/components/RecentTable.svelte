@@ -1,13 +1,16 @@
 <script>
-  $: data = [{
-    address: "abcde",
-    amount: 71,
-    is_mined: false,
-  }, {
-    address: "zyxwvut",
-    amount: 80,
-    is_mined: true,
-  }]
+  import Payouts from '@/api/payouts.js';
+  import { onMount } from 'svelte';
+
+  let data = []
+
+  async function loadData() {
+    data = await Payouts.recent();
+  }
+
+  onMount(async () => {
+    await loadData()
+  })
 </script>
 
 <table class="table is-fullwidth is-striped">
@@ -22,10 +25,22 @@
   <tbody>
   {#each data as x}
     <tr>
-      <td>{x.address}</td>
-      <td class="has-text-centered">{x.amount.toFixed(8)}</td>
-      <td class="has-text-centered">{x.is_mined}</td>
+      <td>
+        <a href="http://testnet.sicash.network/address/{x.address}" class="address">
+          {x.address}
+        </a>
+      </td>
+      <td class="has-text-centered amount">{x.amount.toFixed(8)}</td>
+      <td class="has-text-centered">
+        {#if x.is_mined}
+          <span class="icon">
+            <i class="fas fa-check"></i>
+          </span>
+        {/if}
+    </td>
     </tr>
+  {:else}
+    <p>Loading...</p>
   {/each}
   </tbody>
 
