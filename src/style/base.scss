@@ -37,3 +37,20 @@ a.address:hover {
 .table {
   font-size: 1.125rem;
 }
+
+.default-position-style-bottom-center, .default-position-style-bottom-left, .default-position-style-bottom-right, .default-position-style-top-center, .default-position-style-top-left, .default-position-style-top-right {
+  z-index: 30
+}
+
+.notification {
+  width: 600px;
+  padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+}
+
+.default-position-style-bottom-center, .default-position-style-bottom-left, .default-position-style-bottom-right, .default-position-style-top-center, .default-position-style-top-left, .default-position-style-top-right {
+  width: 600px !important;
+}
+
+.default-notification-style-content {
+  width: 540px !important;
+}

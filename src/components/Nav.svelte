@@ -16,6 +16,11 @@
 
   .navbar-item {
     color: white;
+
+    img {
+      max-height: 3rem;
+      width: auto;
+    }
   }
   .navbar-item:hover {
     background-color: black;
@@ -31,8 +36,7 @@
 <nav class="navbar is-dark">
   <div class="navbar-brand">
     <a class="navbar-item" href="/" use:link>
-      <img alt="Branding" src="https://bulma.io/images/bulma-logo.png"
-        width="112" height="28">
+      <img alt="Branding" src="/sicash-icon.png" />
     </a>
   </div>
   <div class="navbar-menu">

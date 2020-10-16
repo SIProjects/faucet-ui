@@ -7,6 +7,7 @@ import postcss from 'rollup-plugin-postcss';
 import alias from '@rollup/plugin-alias';
 import path from 'path';
 import autoPreprocess from 'svelte-preprocess';
+import pluginJson from '@rollup/plugin-json';
 
 const production = !process.env.ROLLUP_WATCH;
 
@@ -95,6 +96,8 @@ export default {
         { find: '@', replacement: path.resolve(__dirname, 'src') },
       ]
     }),
+
+    pluginJson(),
 	],
 	watch: {
 		clearScreen: false

@@ -10,6 +10,10 @@
 
   onMount(async () => {
     await loadData()
+
+    setInterval(() => {
+      loadData()
+    }, 30000);
   })
 </script>
 
