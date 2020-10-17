@@ -51,7 +51,7 @@ Please enter your SICash address to receive test tokens
     addNotification({
       text, type, icon,
       position: 'top-center',
-      //removeAfter: 4000,
+      removeAfter: 6000,
     });
 
     isLoading = false;
