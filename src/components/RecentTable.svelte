@@ -34,7 +34,7 @@
           {x.address}
         </a>
       </td>
-      <td class="has-text-centered amount">{x.amount.toFixed(8)}</td>
+      <td class="has-text-centered amount">{x.amount.toFixed(2)}</td>
       <td class="has-text-centered">
         {#if x.is_mined}
           <span class="icon">
