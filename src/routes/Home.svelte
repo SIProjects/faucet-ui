@@ -70,8 +70,8 @@ Please enter your SICash address to receive test tokens
     margin-bottom: -2rem;
   }
   .image {
-    width: 400px;
-    height: 187px;
+    max-width: 400px;
+    max-height: 187px;
     margin-left: auto;
     margin-right: auto;
   }
